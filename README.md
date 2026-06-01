@@ -1,3 +1,11 @@
+---
+title: Nexus Health AI
+emoji: ⚕️
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
 # Nexus Health AI - Healthcare Assistant
 
 **Nexus Health AI** adalah asisten medis cerdas berbasis Artificial Intelligence yang dirancang untuk memberikan panduan gejala, tips kesehatan preventif, analisis dokumen medis (Lab/Resep), dan edukasi kesehatan kepada pasien.

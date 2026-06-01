@@ -24,8 +24,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Menyalin seluruh file project ke dalam direktori kerja (/app) dengan hak akses user
 COPY --chown=user . /app
 
+# Pindah direktori kerja ke backend agar import Python berjalan normal (seperti di lokal)
+WORKDIR /app/backend
+
 # Hugging Face Spaces mewajibkan aplikasi berjalan di port 7860
 EXPOSE 7860
 
-# Perintah untuk menjalankan server FastAPI Uvicorn
-CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "7860"]
+# Perintah untuk menjalankan server FastAPI Uvicorn dari dalam folder backend
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
